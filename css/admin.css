@@ -1,0 +1,202 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body{
+    background: #e2e2e2;
+}
+
+.wrapper{
+    position: absolute;
+    width: 100%;
+
+}
+
+.wrapper .admin-navbar{
+
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.wrapper .admin-navbar a{
+    color: #2c4059;
+
+}
+
+.wrapper .admin-navbar .left ul,
+.wrapper .admin-navbar .right ul li a
+{
+     display: flex;
+     height: 40px;
+     align-items: center;
+
+}
+
+.wrapper .admin-navbar .left ul li,
+.wrapper .admin-navbar .right img
+{
+    margin:  0 10px;
+    
+}
+
+.wrapper .admin-navbar .right a{
+    text-align: right;
+
+}
+
+.wrapper .admin-navbar .right a span{
+    font-size: 10px;
+
+}
+
+.wrapper .admin-navbar .right ul li{
+    position: relative;
+    
+}
+
+.wrapper .admin-navbar .right ul li .dropdown{
+    position: absolute;
+    top:65px;
+    right: 0;
+    width: 190px;
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: none;
+}
+
+.wrapper .admin-navbar .right ul li .dropdown .fas{
+    margin-right: 10px;
+}
+.wrapper .admin-navbar .right ul li .dropdown:before{
+    content:"";
+    position: absolute;
+    top:-20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10xp solid ;
+    border-color:transparent transparent #fff transparent;
+}   
+
+.wrapper .admin-navbar .right ul li.active .dropdown{
+    display: block;
+
+}
+
+.main-body{
+    width: 100%;
+    padding-top:200px;
+
+}
+
+.main-buttoms{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    border-radius: 5px;
+   
+}
+
+.buttom{
+    color: white;
+    background: #2c4059;
+    width:150px;
+    align-items: right;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+
+.buttom2{
+    color: white;
+    background: #00414d;
+    width:150px;
+    align-items: right;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.buttom3{
+    color: white;
+    background: #ed5351;
+    width:150px;
+    align-items: right;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.buttom4{
+    color: white;
+    background: #3983aa;
+    width:150px;
+    align-items: right;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buttom5{
+    color: white;
+    background: #6c2871;
+    width:150px;
+    align-items: right;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buttom6{
+    color: white;
+    background: #00414d;
+    width:150px;
+    align-items: right;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main-body .main-buttoms .buttom .fas{
+   font-size: 54px;
+   padding: 10px;
+}
+.main-body .main-buttoms .buttom2 .fas{
+    font-size: 54px;
+    padding: 10px;
+ }
+
+ .main-body .main-buttoms .buttom3 .fas{
+    font-size: 54px;
+    padding: 10px;
+ }
+
+ .main-body .main-buttoms .buttom4 .fas{
+    font-size: 54px;
+    padding: 10px;
+ }
+
+ .main-body .main-buttoms .buttom5 .fas{
+    font-size: 54px;
+    padding: 10px;
+ }
+
+ .main-body .main-buttoms .buttom6 .fas{
+    font-size: 54px;
+    padding: 10px;
+ }
+
+a{
+    text-decoration: none;
+    color: white; 
+}

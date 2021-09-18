@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+
+
+.login-form{
+    width: clac(100% - 20%);
+    max-width: 500px;
+    background-color: #fff;
+    padding: 5px 40px;
+
+}
+
+.login-form h1{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 36px;
+    color: #111;
+
+}
+.textb{
+    margin-bottom: 12px;
+    position: relative;
+    text-align: right;
+}
+
+.textField{
+    margin-bottom: 12px;
+    position: relative;
+    text-align: right;
+
+}
+
+.textField input{
+    width: 100%;
+    height: 90px;
+    border: none;
+    background-color:#ededed;
+    border-radius: 4px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 60px 0 10px;
+    text-align: right;
+}
+
+.textb input{
+    width: 100%;
+    height: 70%;
+    border: none;
+    background-color:#ededed;
+    border-radius: 4px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 60px 0 10px;
+    text-align: right;
+
+}
+
+.placeholder{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    line-height: 40px;
+    top: 0;
+    right: 20px;
+    color: #9d9d9d;
+    user-select: none;
+    pointer-events: none;
+
+}
+
+
+
+.textb input:focus ~ .placeholder,
+.textb input:valid ~ .placeholder{
+    
+    right: 10px;
+    top: -10px;
+
+}
+
+
+
+.btn{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 40px auto;
+    background-color: #005778;
+    color: #fff;
+    font-size: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+    
+
+}
+
+.btnnew{
+
+    width: 300px;
+    height: 50px;
+    margin: 10px auto;
+    background-color: #005778;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+    
+    
+
+}
+
+.btnDelete{
+    width: 300px;
+    height: 50px;
+    margin: 10px auto;
+    background-color: #780000;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.btn:hover{
+    opacity: .85;
+
+}
+
+.login-form a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 8px;
+    transition: .2s linear;
+
+}
+
+.login-form a:hover{
+    color: #111;
+
+}
+
+.btn:disabled{
+    background-color: transparent;
+    color:#ddd;
+    border:2px solid;
+}
+
+.formStyle{
+    width: 100%;
+    padding-top:70px;
+}
+
+.select select{
+    margin-bottom: 12px;
+    position: relative;
+    text-align: right;
+
+}
+
+
+.select select{
+    width: 100%;
+    height: 80%;
+    border: none;
+    background-color:#ededed;
+    border-radius: 4px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 10px 10px 10px;
+    text-align: right;
+    text-align-last: right;
+    direction: rtl;
+    
+
+}
+
+
