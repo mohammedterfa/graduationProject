@@ -62,24 +62,17 @@
 
             <div class="select" >
                 <select name="state">
-                <option value="">إختار الولاية </option>
-                <option value="الخرطوم">الخرطوم</option>
-                <option value="الجزيرة" >الجزيرة</option>
-                <option value="كسلا" >كسلا</option>
-                <option value="القضارف">القضارف</option>
-                <option value="سنار">سنار</option>
-                <option value="النيل الابيض">النيل الابيض</option>
-                <option value="النيل الازرق">النيل الازرق</option>
-                <option value="الشمالية">الشمالية</option>
-                <option value="نهر النيل">نهر النيل</option>
-                <option value="شمال كردفان">شمال كردفان</option>
-                <option value="غرب كردفان">غرب كردفان</option>
-                <option value="جنوب كردفان">جنوب كردفان</option>
-                <option value="شمال دارفور">شمال دارفور</option>
-                <option value="غرب دارفور">غرب دارفور</option>
-                <option value="جنوب دارفور">جنوب دارفور</option>
-                <option value="شرق دارفور">شرق دارفور</option>
-                <option value="وسط دارفور">وسط دارفور</option>
+                <option value="">الدولة</option>
+                <option value="السودان">السودان</option>
+                <option value="مصر">مصر</option>
+                <option value="الأردن">الأردن</option>
+                <option value="السعودية">السعودية</option>
+                <option value="قطر">قطر</option>
+                <option value="الإمارات">الإمارات</option>
+                <option value="الكويت">الكويت</option>
+                <option value="سلطنة عمان">سلطنة عمان</option>
+
+               
                 </select >        
                
             </div>

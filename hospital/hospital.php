@@ -46,35 +46,42 @@ if(!isset($_SESSION['loginUser'])){
     
     <div class="main-body">
     <div class="main-buttoms">
-        <div class="buttom6"><a href="showAdmin.php">
-        <p><i class="fas fa-id-card"></i></p>
-        <p>عرض بيانات مدراء النظام</p></a>
-        </div>
-
-        <div class="buttom5"><a href="addNewAdmin.php">
-        <p><i class="fas fa-user"></i></p>
-        <p>إنشاء مدير جديد للنظام</p></a>
-        </div>
-
         <div class="buttom4"><a href="">
         <p><i class="fas fa-newspaper"></i></p>
         <p>تقاير مفصلة عن المستشفى</p></a>
         </div>
 
-        <div class="buttom3"><a href="deleteUpdateHospital.php">
-        <p><i class="fas fa-pen-alt"></i></p>
-        <p>حذف و تعديل بيانات المستشفى</p></a>
+
+        <div class="buttom5"><a href="addNewAdmin.php">
+        <p><i class="fas fa-user"></i></p>
+        <p>استقبال مريض في المستشفى</p></a>
         </div>
 
-        <div class="buttom2"><a href="selectHospital.php">
-        <p><i class="fas fa-poll"></i></p>
-        <p>عرض بيانات المستشفى</p></a>
-        </div>
-
+        
         <div class="buttom"><a href="selectNewHospital.php">
         <p><i class="fas fa-random"></i></p>
         <p>تحويل مريض لمستشفى آخر</p></a>
         </div>
+
+
+        <div class="buttom"><a href="selectNewHospital.php">
+        <p><i class="fas fa-random"></i></p>
+        <p>حذف وتعديل سجل مريض</p></a>
+        </div>
+
+        
+
+        <div class="buttom3"><a href="deleteUpdateHospital.php">
+        <p><i class="fas fa-pen-alt"></i></p>
+        <p>عرض سجل مريض</p></a>
+        </div>
+
+        <div class="buttom2"><a href="selectHospital.php">
+        <p><i class="fas fa-poll"></i></p>
+        <p>اضافة سجل مريض جديد</p></a>
+        </div>
+
+        
     </div>
     
     </div>
