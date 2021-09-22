@@ -71,7 +71,7 @@ tr:nth-child(even){background-color: #f2f2f2;}
                         <th>اسم المستخدم</th>
                         <th>رقم الهاتف</th>
                         <th>العنوان</th>
-                        <th>الولاية</th>
+                        <th>الدولة</th>
                         <th>اسم المستشفى</th>
                         <th>الرقم التسلسلي</th>
                     </tr>

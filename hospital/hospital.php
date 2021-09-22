@@ -53,7 +53,7 @@ if(!isset($_SESSION['loginUser'])){
 
 
         <div class="buttom5"><a href="addNewAdmin.php">
-        <p><i class="fas fa-user"></i></p>
+        <p><i class="fas fa-hospital-user"></i></p>
         <p>استقبال مريض في المستشفى</p></a>
         </div>
 
@@ -65,18 +65,18 @@ if(!isset($_SESSION['loginUser'])){
 
 
         <div class="buttom"><a href="selectNewHospital.php">
-        <p><i class="fas fa-random"></i></p>
+        <p><i class="fas fa-edit"></i></p>
         <p>حذف وتعديل سجل مريض</p></a>
         </div>
 
         
 
         <div class="buttom3"><a href="deleteUpdateHospital.php">
-        <p><i class="fas fa-pen-alt"></i></p>
+        <p><i class="fas fa-eye"></i></p>
         <p>عرض سجل مريض</p></a>
         </div>
 
-        <div class="buttom2"><a href="selectHospital.php">
+        <div class="buttom2"><a href="addNewPetientRecord.php">
         <p><i class="fas fa-poll"></i></p>
         <p>اضافة سجل مريض جديد</p></a>
         </div>
