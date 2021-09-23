@@ -47,20 +47,20 @@
 
         <center>
         <div class="formStyle">
-        <form action="insertHospital.php" method="post" class="login-form">
+        <form action="insertPatient.php" method="post" class="login-form" enctype="multipart/form-data">
             <h1>إضــافة سجل مريض جديد</h1>
 
             <div class="textb">
-                <input type="text" required name="hospitalname">
+                <input type="text" required name="name">
                 <div class="placeholder">اسم المريض كامل</div>
             </div>
             <div class="textb">
-                <input type="text" required name="hospitalid">
+                <input type="text" required name="id">
                 <div class="placeholder">الرقم التسلسلي للسجل المرضي</div>
             </div>
 
             <div class="select" >
-                <select name="state">
+                <select name="gender">
                 <option value="">الجنس</option>
                 <option value="ذكر">ذكر</option>
                 <option value="أنثى">أنثى</option>               
@@ -68,7 +68,7 @@
                
             </div>
             <div class="select" >
-                <select name="state">
+                <select name="nationality">
                 <option value="">الجنسية</option>
                 <option value="سوداني">سوداني</option>
                 <option value="مصري">مصري</option>
@@ -90,12 +90,12 @@
             </div>
 
             <div class="textField">
-                <input type="date"  required name="address">
+                <input type="date"  required name="birthdate">
                 <div class="placeholder">تاريخ الميلاد</div>
             </div>
             
             <div class="select" >
-                <select name="state">
+                <select name="bloodtype">
                 <option value="">فصيلة الدم</option>
                 <option value="+A">+A</option>
                 <option value="+B">+B</option>
@@ -112,22 +112,22 @@
             </div>
 
             <div class="textb">
-                <input type="text" required name="phone">
+                <input type="text" required name="disease">
                 <div class="placeholder">المرض/ الأمراض</div>
             </div>
 
             <div class="textb">
-                <input type="text" required name="phone">
+                <input type="text" required name="medicine">
                 <div class="placeholder">الدواء / الأدوية</div>
             </div>
 
             <div class="textb">
-                <input type="text" required name="phone">
+                <input type="text" required name="allergy">
                 <div class="placeholder">الأدوية التي تسبب حساسية للمريض أو الممنوعة</div>
             </div>
 
             <div class="textb">
-                <input type="file" required name="phone">
+                <input type="file" required name="labtest">
                 <div class="placeholder">(pdf)نتائج الاختبارات المعملية</div>
             </div>
             
@@ -137,11 +137,11 @@
             </div>
 
             <div class="textb">
-                <input type="text" required name="phone">
+                <input type="text" required name="anotherphone">
                 <div class="placeholder">رقم هاتف بديل</div>
             </div>
 
-            <center><button class="btnnew"  name="addnewhospital" type="submit">إضافة مستشفى جديدة</button>
+            <center><button class="btnnew"  name="addnewpatient" type="submit">إضافة سجل جديد</button>
             
         </form>
 

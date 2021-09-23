@@ -64,16 +64,9 @@ if(!isset($_SESSION['loginUser'])){
         </div>
 
 
-        <div class="buttom"><a href="selectNewHospital.php">
+        <div class="buttom"><a href="findpatienttoview.php">
         <p><i class="fas fa-edit"></i></p>
-        <p>حذف وتعديل سجل مريض</p></a>
-        </div>
-
-        
-
-        <div class="buttom3"><a href="deleteUpdateHospital.php">
-        <p><i class="fas fa-eye"></i></p>
-        <p>عرض سجل مريض</p></a>
+        <p>عرض او تعديل او حذف بيانات مريض</p></a>
         </div>
 
         <div class="buttom2"><a href="addNewPetientRecord.php">

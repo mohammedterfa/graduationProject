@@ -1,7 +1,6 @@
 <?php 
     include "login.php";
     include_once "connection.php";
-    $username = $_SESSION['loginUser'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +21,7 @@
         <div class="admin-navbar">
             <div class="left">
                 <ul>
-                <li><a href="admin.php"><i class="fas fa-home"></i></a></li>
+                <li><a href="hospital.php"><i class="fas fa-home"></i></a></li>
                 <li><a href="#"><i class="fas fa-envelope"></i></a></li>
                 <li><a href="#"><i class="fas fa-bell"></i></a></li>
                 </ul>
@@ -38,7 +37,7 @@
                     <ul>
                     <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
                     <li><a href="#"><i class="fas fa-sliders-h"></i>Setting</a></li>
-                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>تسجيل خروج</a></li>
+                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Signout</a></li>
                     </ul>
                 </div>
                 </li>
@@ -49,23 +48,16 @@
 
         <center>
         <div class="formStyle">
-        <form action="PatientData.php" method="post" class="login-form">
-            <br><br><h2>اختار المستشفى المراد التحويل إليها</h2><br><br>
-            <div class="select" >
-                <select name="state">
-                <option value="">إختار مستشفى</option>
-                <?php
-                $query = "select * from hospital where username != '$username'";
-                mysqli_set_charset($connect,'utf8');
-                $result = mysqli_query($connect,$query);
-                while($row = mysqli_fetch_array($result)){ ?>
-                <option value="<?php echo $row[1]; ?>"><?php echo $row[0]; ?></option>
-                <?php } ?>
-                </select >        
-               
+        <form action="findpatientbyid.php" method="post" class="login-form">
+            <h1>البحث عن مريض</h1>
+
+            <div class="textb">
+                <input type="text" required name="name">
+                <div class="placeholder">ادخل الرقم التسلسلي للمريض</div>
             </div>
 
-            <center><button class="btnnew"  name="PatientData" type="submit">التـــالي &nbsp;&nbsp; <i class="fas fa-chevron-circle-right"></i> </button>
+            <center><button class="btnnew"  name="viewpatient" type="submit"> التالــــي    <i class="fas fa-arrow-circle-right"></i>  </button>
+            
             
         </form>
 
