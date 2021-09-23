@@ -48,15 +48,17 @@
 
         <center>
         <div class="formStyle">
-        <form action="findpatientbyid.php" method="post" class="login-form">
-            <h1>البحث عن مريض</h1>
+        <form action="" method="" class="login-form">
+            <h1>التأكد من اسم المريض</h1>
 
             <div class="textb">
-                <input type="text" required name="id">
-                <div class="placeholder">ادخل الرقم التسلسلي للمريض</div>
+                <input type="text" readonly name="id" value="<?php echo $_SESSION['patientname'] ?>">
+                <div class="placeholder"></div>
             </div>
-
-            <center><button class="btnnew"  name="viewpatient" type="submit"> التالــــي    <i class="fas fa-arrow-circle-right"></i>  </button>
+            <center><a href="process.php"><button class="btnnew"  name="" type="button">عرض بيانات المريض</button> </a>
+            <center><a href="process.php"><button class="btnnew"  name="" type="button">تعديل بيانات المريض</button> </a>
+            <center><a href="process.php"><button class="btnDelete"  name="" type="button">حذف بيانات المريض</button> </a>
+            <center><a href="findpatienttoview"><button class="btnnew"  name="" type="button"><i class="fas fa-arrow-circle-left"></i> رجــــوع  </button> </a>
             
             
         </form>
