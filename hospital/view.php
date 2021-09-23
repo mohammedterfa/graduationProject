@@ -15,6 +15,22 @@
         <link rel="stylesheet" href="../css/admin.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+        <style>
+            table{
+    border-collapse: collapse;
+    width: 98%;
+    color: #588c7e;
+    font-size: 18px;
+    text-align: right;
+}
+
+th{
+    background-color: #588c7e;
+    color: white;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+        </style>
     </head>
     <body>
     <div class="wrapper">
@@ -29,7 +45,7 @@
             <div class="right">
                 <ul>
                 <li><a href="#">
-                    <p><?php  echo $_SESSION['loginUser'];?><br><span>Hospital</span></p>
+                    <p><?php  echo $_SESSION['loginUser'];?><br><span>Admin</span></p>
                     <img src="../img/profile.png" width="40">
                     <i class="fas fa-angle-down"></i>
                 </a>
@@ -37,7 +53,7 @@
                     <ul>
                     <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
                     <li><a href="#"><i class="fas fa-sliders-h"></i>Setting</a></li>
-                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Signout</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i>Signout</a></li>
                     </ul>
                 </div>
                 </li>
@@ -46,22 +62,43 @@
         </div>
     </div>
 
-        <center>
+    <center>
         <div class="formStyle">
-        <form action="process.php" method="post" class="login-form">
-            <h1>التأكد من اسم المريض</h1>
+            <div class="dataTable">
+                <table>
+                    <tr>
+                        <th>الهاتف البديل</th>
+                        <th>الهاتف</th>
+                        <th>الفحوصات</th>
+                        <th>حساسية من الأدوية</th>
+                        <th>الأدوية</th>
+                        <th>المرض</th>
+                        <th>فصيلة الدم</th>
+                        <th>تاريخ الميلاد</th>
+                        <th>العنوان</th>
+                        <th>الجنسية</th>
+                        <th>الجنس</th>
+                        <th>الرقم التسلسلي</th>
+                        <th>الاسم</th>
+                    </tr>
+                    <?php 
+                        $id = $_SESSION['id'];
+                        $sql = "select * from patient where id='$id'";
+                        $result = $connect->query($sql);
 
-            <div class="textb">
-                <input type="text" readonly name="id" value="<?php echo $_SESSION['patientname'] ?>">
-                <div class="placeholder"></div>
+                        if($result->num_rows > 0){
+                            while ($row = $result-> fetch_assoc()){
+                                echo "<tr><td>". $row['anotherphone'] ."</td><td>". $row['phone'] ."</td><td>". $row['labtest'] ."</td><td>". $row['allergy'] ."</td><td>". $row['medicine'] ."</td><td>". $row['disease'] ."</td><td>". $row['bloodtype'] ."</td><td>". $row['birthdate'] ."</td><td>". $row['address'] ."</td><td>". $row['nationality'] ."</td><td>". $row['gender'] ."</td><td>". $row['id'] ."</td><td>". $row['name'] ."</td></tr>";
+                            }
+                            echo "</table>";
+                        }else{
+                            echo "نتائج 0";
+                        }
+                        $connect->close();
+                    ?>
+                
             </div>
-            <center><button class="btnnew"  name="select" type="submit">عرض بيانات المريض</button> 
-            <center><button class="btnnew"  name="edit" type="submit">تعديل بيانات المريض</button>
-            <center><button class="btnDelete"  name="delete" type="submit">حذف بيانات المريض</button>
-            <center><a href="findpatienttoview"><button class="btnnew"  name="" type="button"><i class="fas fa-arrow-circle-left"></i> رجــــوع  </button> </a>
-            
-            
-        </form>
+        </div>
 
      
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -69,28 +106,6 @@
         document.querySelector(".right ul li").addEventListener("click",function(){
             this.classList.toggle("active");
         });
-    </script>
-    <script>
-         <?php 
-      if(isset($_GET['status'])){
-        if($_GET['status'] == 'success'){
-           ?>
-           
-               swal({
-                    title: "تمت العملية",
-                    text: "تمت اضافة المستشفى بنجاح",
-                    icon: "success",
-                    button: "تم",
-                    });
-           
-           <?php
-        }else{
-            ?>
-            swal ( "لم تتم العملية" ,  "تعذر اضافة المستشفى" ,  "error" );
-            <?php
-        }
-      }
-      ?>
     </script>
     </body>
 </html>
