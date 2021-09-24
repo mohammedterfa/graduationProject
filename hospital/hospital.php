@@ -58,7 +58,7 @@ if(!isset($_SESSION['loginUser'])){
         </div>
 
         
-        <div class="buttom"><a href="selectNewHospital.php">
+        <div class="buttom"><a href="transfer.php">
         <p><i class="fas fa-random"></i></p>
         <p>تحويل مريض لمستشفى آخر</p></a>
         </div>
