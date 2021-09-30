@@ -28,6 +28,9 @@ th{
     background-color: #588c7e;
     color: white;
 }
+a{
+    color: #588c7e;
+}
 
 tr:nth-child(even){background-color: #f2f2f2;}
         </style>
@@ -88,7 +91,7 @@ tr:nth-child(even){background-color: #f2f2f2;}
 
                         if($result->num_rows > 0){
                             while ($row = $result-> fetch_assoc()){
-                                echo "<tr><td>". $row['anotherphone'] ."</td><td>". $row['phone'] ."</td><td>". $row['labtest'] ."</td><td>". $row['allergy'] ."</td><td>". $row['medicine'] ."</td><td>". $row['disease'] ."</td><td>". $row['bloodtype'] ."</td><td>". $row['birthdate'] ."</td><td>". $row['address'] ."</td><td>". $row['nationality'] ."</td><td>". $row['gender'] ."</td><td>". $row['id'] ."</td><td>". $row['name'] ."</td></tr>";
+                                echo "<tr><td>". $row['anotherphone'] ."</td><td>". $row['phone'] ."</td><td><a href="."../Files/". $row['labtest'] ." >". $row['labtest'] ."</a></td><td>". $row['allergy'] ."</td><td>". $row['medicine'] ."</td><td>". $row['disease'] ."</td><td>". $row['bloodtype'] ."</td><td>". $row['birthdate'] ."</td><td>". $row['address'] ."</td><td>". $row['nationality'] ."</td><td>". $row['gender'] ."</td><td>". $row['id'] ."</td><td>". $row['name'] ."</td></tr>";
                             }
                             echo "</table>";
                         }else{
