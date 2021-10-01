@@ -14,6 +14,9 @@ if(isset($_POST["login_btn"])){
         $row = mysqli_fetch_assoc($result);
             
         $_SESSION['loginUser'] = $row["username"];
+        $_SESSION['HosName'] = $row["hospitalname"];
+        $_SESSION['HosIdForQuery'] = $row["hospitalid"];
+
         header('Location: hospital.php');
                     
         }

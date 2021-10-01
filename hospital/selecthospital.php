@@ -53,7 +53,7 @@ if(isset($_POST["selecthospital"])){
         <form action="transferedhospital.php" method="post" class="login-form">
             <h1>اختار المستشفى المراد التحويل لها</h1>
             <div class="select" >
-                <select name="state">
+                <select name="toHos" required>
                 <option value="">إختار مستشفى</option>
                 <?php
                 $hosname = $_SESSION['loginUser'];
@@ -67,7 +67,8 @@ if(isset($_POST["selecthospital"])){
                
             </div>
 
-            <center><button class="btnnew"  name="transferedhospital" type="submit">اختيار المستشفى</button>
+            <center><button class="btnnew"  name="transferedhospital" type="submit">التالــــي    <i class="fas fa-arrow-circle-right"></i></button>
+            <center><a href="viewnametransfer.php"><button class="btnnew"  name="" type="button"><i class="fas fa-arrow-circle-left"></i> رجــــوع  </button> </a>
             
         </form>
 
