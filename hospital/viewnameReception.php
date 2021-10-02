@@ -1,29 +1,27 @@
 <?php 
-session_start();
-
-if(!isset($_SESSION['loginUser'])){
-    header('Location: index.php');
-}
+    include "login.php";
+    include_once "connection.php";
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Admin Page</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js" integrity="sha512-7yA/d79yIhHPvcrSiB8S/7TyX0OxlccU8F/kuB8mHYjLlF1MInPbEohpoqfz0AILoq5hoD7lELZAYYHbyeEjag==" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cloud Based Healthcare Facilitie</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js" integrity="sha512-7yA/d79yIhHPvcrSiB8S/7TyX0OxlccU8F/kuB8mHYjLlF1MInPbEohpoqfz0AILoq5hoD7lELZAYYHbyeEjag==" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
         <link rel="stylesheet" href="addstyle.css">
         <link rel="stylesheet" href="../css/admin.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
+    </head>
+    <body>
     <div class="wrapper">
         <div class="admin-navbar">
             <div class="left">
                 <ul>
-                <li><a href="#"><i class="fas fa-home"></i></a></li>
+                <li><a href="hospital.php"><i class="fas fa-home"></i></a></li>
                 <li><a href="#"><i class="fas fa-envelope"></i></a></li>
                 <li><a href="#"><i class="fas fa-bell"></i></a></li>
                 </ul>
@@ -39,7 +37,7 @@ if(!isset($_SESSION['loginUser'])){
                     <ul>
                     <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
                     <li><a href="#"><i class="fas fa-sliders-h"></i>Setting</a></li>
-                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>تسجيل خروج</a></li>
+                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Signout</a></li>
                     </ul>
                 </div>
                 </li>
@@ -47,41 +45,23 @@ if(!isset($_SESSION['loginUser'])){
             </div>
         </div>
     </div>
-    
-    <div class="main-body">
-    <div class="main-buttoms">
-        <div class="buttom4"><a href="">
-        <p><i class="fas fa-newspaper"></i></p>
-        <p>تقاير مفصلة عن المستشفى</p></a>
-        </div>
 
+        <center>
+        <div class="formStyle">
+        <form action="confirmationOfReception.php" method="post" class="login-form">
+            <h1>التأكد من اسم المريض</h1>
 
-        <div class="buttom5"><a href="patientReception.php">
-        <p><i class="fas fa-hospital-user"></i></p>
-        <p>استقبال مريض في المستشفى</p></a>
-        </div>
+            <div class="textb">
+                <input type="text" readonly name="id" value="<?php echo $_SESSION['patientnameReception'] ?>">
+                <div class="placeholder"></div>
+            </div>
+            <center><button class="btnnew"  name="confirmationOfReception" type="submit" style="background-color:green">تأكيد استقبال المريض</button>             
+            <center><a href="patientReception.php"><button class="btnnew"  name="" type="button"><i class="fas fa-arrow-circle-left"></i> رجــــوع  </button> </a>
+            
+            
+        </form>
 
-        
-        <div class="buttom"><a href="transfer.php">
-        <p><i class="fas fa-random"></i></p>
-        <p>تحويل مريض لمستشفى آخر</p></a>
-        </div>
-
-
-        <div class="buttom"><a href="findpatienttoview.php">
-        <p><i class="fas fa-edit"></i></p>
-        <p>عرض او تعديل او حذف بيانات مريض</p></a>
-        </div>
-
-        <div class="buttom2"><a href="addNewPetientRecord.php">
-        <p><i class="fas fa-poll"></i></p>
-        <p>اضافة سجل مريض جديد</p></a>
-        </div>
-
-        
-    </div>
-    
-    </div>
+     
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         document.querySelector(".right ul li").addEventListener("click",function(){
@@ -96,7 +76,7 @@ if(!isset($_SESSION['loginUser'])){
            
                swal({
                     title: "تمت العملية",
-                    text: "تم استقبال المريض بنجاح",
+                    text: "تمت اضافة المستشفى بنجاح",
                     icon: "success",
                     button: "تم",
                     });
@@ -104,11 +84,11 @@ if(!isset($_SESSION['loginUser'])){
            <?php
         }else{
             ?>
-            swal ( "لم تتم العملية" ,  "تعذر استقبال المريض" ,  "error" );
+            swal ( "لم تتم العملية" ,  "تعذر اضافة المستشفى" ,  "error" );
             <?php
         }
       }
       ?>
     </script>
-</body>
+    </body>
 </html>

@@ -50,6 +50,14 @@
         <div class="formStyle">
         <form action="findpatientbyid.php" method="post" class="login-form">
             <h1>البحث عن مريض</h1>
+            <p style="color:red; margin-top:40px;"> 
+            <?php 
+                if(isset($_GET['message'])){
+                    if($_GET['message'] == "InvalidUserNameandPassword"){
+                        echo "هذا الرقم غير موجود";
+                }}
+            ?>
+            </p><br>
 
             <div class="textb">
                 <input type="text" required name="id">
@@ -76,7 +84,7 @@
            
                swal({
                     title: "تمت العملية",
-                    text: "تمت اضافة المستشفى بنجاح",
+                    text: "تم حذف سجل المريض بنجاح",
                     icon: "success",
                     button: "تم",
                     });
@@ -84,7 +92,7 @@
            <?php
         }else{
             ?>
-            swal ( "لم تتم العملية" ,  "تعذر اضافة المستشفى" ,  "error" );
+            swal ( "لم تتم العملية" ,  "تعذر حذف سجل المريض" ,  "error" );
             <?php
         }
       }
